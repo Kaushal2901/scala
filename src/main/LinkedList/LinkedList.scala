@@ -1,3 +1,4 @@
+
 package main
 
 import scala.annotation.tailrec
@@ -13,8 +14,11 @@ object LinkedList {
 
   def main(args: Array[String]): Unit = {
     var head = Node(2, None)
-    var list = addElements(head, 1)
-    println(list)
+    var addedlist = addElements(head, 3)
+    println(addedlist)
+
+    var deletedlist = deleleElement(addedlist, 1)
+    println(deletedlist)
   }
 
   /** reverse a link list recursively
@@ -56,25 +60,22 @@ object LinkedList {
     }
   }
 
-  def deleleElement(head : Node , element: Int): Node = {
 
-    head match{
-      case null => print("empty List")
-        null
-      case _ =>
-        head.next match {
-          case None =>
-            if(head.value == element)
-              null
-            else
-              head
-          case Some(next) =>
-            if(head.value == element)
-              null
-            else
-              deleleElement(next, element)
+  def deleleElement(head: Node, element: Int): Unit = {
+
+    val test: List[Int] = List(1,2,3)
+    val newtest= test.drop(1)
+    println(newtest)
+
+    /*var current = head
+    current match {
+      case null => current
+      case node =>
+        node.next match {
+          case None => if (node.value == element) node = null
+          case Some(node1) => deleleElement(node1, element)
         }
-    }
+    }*/
   }
 
 }

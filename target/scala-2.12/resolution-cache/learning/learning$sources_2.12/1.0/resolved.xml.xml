@@ -4,7 +4,7 @@
 		module="learning$sources_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20180512004717"
+		publication="20180525220233"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

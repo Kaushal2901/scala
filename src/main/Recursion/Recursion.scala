@@ -1,4 +1,4 @@
-package main
+package main.Recursion
 
 import scala.annotation.tailrec
 
@@ -22,7 +22,7 @@ object Recursion {
     val factorial = factorialWithAccum(5, 1)
     println(" recursive factorial calculated : " + factorial)
 
-    val fibonacci = fibonacciWithAccum(1, 2, List(1,2), 5)
+    val fibonacci = fibonacciWithAccum(1, 2, List(1, 2), 5)
     println("recursive fibonacci list: " + fibonacci)
   }
 
@@ -71,6 +71,15 @@ object Recursion {
         maxAccumulator(tail, tempMax)
     }
   }
+
+
+  def factorial(num: Int): Int = {
+    if (num == 0)
+      return 1
+    else
+      return (num * factorial(num - 1))
+  }
+
 
   /** recursive function to return factorial of a given number
     *
